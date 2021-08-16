@@ -40,7 +40,7 @@ export function About() {
           characters to look the same on other people's devices.
         </li>
         <li>
-          Tralpha's alphabets are somewhat arbitrary because I defined them. They're not
+          Tralpha's alphabets are arbitrary. I defined them. They're not
           standard alphabets. In some cases, the Unicode Standard defines
           characters consecutively that share similar styling, which make for
           easy compilation of an alphabet. But in other cases, the characters
