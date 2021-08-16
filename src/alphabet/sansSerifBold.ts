@@ -1,5 +1,3 @@
-import defaultTo from "lodash/defaultTo";
-
 export const sansSerifBoldMap: Record<string, string> = {
   "0": "𝟬",
   "1": "𝟭",

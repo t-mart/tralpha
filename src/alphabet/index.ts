@@ -1,5 +1,3 @@
-import defaultTo from "lodash/defaultTo";
-
 import { boldMap } from "./bold";
 import { circledMap } from "./circled";
 import { circledNegativeMap } from "./circledNegative";
@@ -24,6 +22,7 @@ import { subscriptMap } from "./subscript";
 import { superscriptMap } from "./superscript";
 
 export const mapsByName: Record<string, Record<string, string>> = {
+  "Normal (No conversion)": {},
   Bold: boldMap,
   Circled: circledMap,
   "Circled Negative": circledNegativeMap,
@@ -49,5 +48,5 @@ export const mapsByName: Record<string, Record<string, string>> = {
 };
 
 export function translateText(alphabetName: string, text: string) {
-  return [...text].map((char) => defaultTo(mapsByName[alphabetName][char], char)).join("")
+  return [...text].map((char) => mapsByName[alphabetName][char] || char).join("")
 }
