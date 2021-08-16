@@ -1,58 +1,72 @@
 export function About() {
   return (
     <div class="max-w-prose mx-auto space-y-4">
+      <h2 class="text-2xl text-yellow-500">What is this thing?</h2>
+
       <p>
-        With Tralpha ("translate alphabet"), you can easily convert your text
-        into other interesting and unusual Unicode alphabets.
+        Ever wanted to make your text stand out in a chat message, tweet, or
+        post, but can't change your font?
       </p>
 
-      <p>For example:</p>
+      <p>
+        With Tralpha ("
+        <em class="italic">tr</em>anslate <em class="italic">alpha</em>bet"),
+        you can easily convert your text into other interesting and unusual
+        Unicode alphabets{" "}
+        <strong class="font-bold">within the font you are already using</strong>
+        !
+      </p>
 
-      <div class="flex justify-evenly items-center">
-        <span class="text-5xl">hello</span>
-        <span> converts to </span>
-        <span class="text-5xl">𝖍𝖊𝖑𝖑𝖔</span>
+      <p>Here's an example. You can change</p>
+
+      <div class="flex items-center flex-col">
+        <span class="text-5xl my-4">cold plums</span>
+        <span class="my-4">to</span>
+        <span class="text-5xl my-4">𝓬𝓸𝓵𝓭 𝓹𝓵𝓾𝓶𝓼</span>
       </div>
 
       <p>
-        The converted text is not in a different font &#8212; instead, it is
-        composed of a different set of characters that happen to look like the
-        original ones. Here, we call these different character sets "alphabets".
+        Again, the converted text is not in a different font &#8212; instead, it
+        is composed of a different set of characters that happen to look like
+        the original ones. Here, we call these different character sets{" "}
+        <em class="italic">alphabets</em>.
       </p>
 
-      <p>
-        In truth, the characters of these other alphabets are not intended to
-        represent general text. In the above example, the string "𝖍𝖊𝖑𝖑𝖔" is
-        composed of characters known as Fraktur, which have special significance
-        in mathematics. The Unicode Standard recommends against these different
-        characters solely for styling purposes, but we're just having fun here.
-        🥳
+      <p>In truth,{" "}
+        <a
+          href="https://www.unicode.org/charts/PDF/U1D400.pdf"
+          class="underline text-gray-300 hover:text-yellow-500"
+        >
+          the Unicode Standard recommends against using these alphabets for
+          general text styling
+        </a>
+        , but we're just having fun here. 🥳
       </p>
 
-      <p>Please note some caveats to using this tool:</p>
+      <h2 class="text-2xl text-yellow-500">Caveats</h2>
 
       <ul class="space-y-4 list-disc ml-8">
         <li>
-          How the characters render is dependent on the font. Therefore, your
+          How the characters render is dependent on your font. Therefore, your
           font may be unable to render some characters or may render them
           strangely. Remember that none of these alphabets are intended to
           represent general text. Additionally, you should not expect the
-          characters to look the same on other people's devices.
+          characters to look the same on other people's devices because they may
+          be using a different font.
         </li>
         <li>
-          Tralpha's alphabets are arbitrary. I defined them. They're not
-          standard alphabets. In some cases, the Unicode Standard defines
-          characters consecutively that share similar styling, which make for
-          easy compilation of an alphabet. But in other cases, the characters
-          are picked from different ranges of Unicode, so their compilation is
-          less intuitive. A good example of this can be found with{" "}
+          Tralpha's alphabets are arbitrary. In some cases, the Unicode Standard
+          defines a consecutive range of characters that share similar styling,
+          which make it easy to say that they're an alphabet. But in other
+          cases, the characters are picked from different ranges of Unicode, so
+          their compilation is less intuitive.{" "}
           <a
             href="https://en.wikipedia.org/w/index.php?title=Unicode_subscripts_and_superscripts&oldid=1038944135#Latin,_Greek_and_Cyrillic_tables"
             class="underline text-gray-300 hover:text-yellow-500"
           >
-            the superscript and subscript alphabets
+            The superscript and subscript alphabets
           </a>
-          .
+          , for example, come from all over the standard.
         </li>
         <li>
           While a best effort has been made to provide alphabets that map from
@@ -68,6 +82,8 @@ export function About() {
         </li>
       </ul>
 
+      <h2 class="text-2xl text-yellow-500">Credits</h2>
+
       <p>
         This tool was inspired by{" "}
         <a
@@ -79,9 +95,11 @@ export function About() {
         .
       </p>
 
+      <h2 class="text-2xl text-yellow-500">Contribute</h2>
+
       <p>
-        See a bug or typo? Want to contribute a new alphabet or other feature?
-        Then please{" "}
+        See a bug or typo? Want to suggest a new alphabet or other feature? Then
+        please{" "}
         <a
           href="https://github.com/t-mart/tralpha/issues"
           class="underline text-gray-300 hover:text-yellow-500"
