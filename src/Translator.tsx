@@ -4,14 +4,15 @@ import { useState } from "preact/hooks";
 import { Translation } from "./Translation";
 
 export function Translator() {
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState(
+    new URL(window.location.href).searchParams.get("text") || ""
+  );
 
   const onInput = (e: Event) => {
     if (e.target instanceof HTMLInputElement) {
       setInputText(e.target.value);
     }
   };
-
 
   return (
     <div class="flex flex-col space-y-4">
@@ -25,11 +26,7 @@ export function Translator() {
       {inputText && (
         <div class="grid grid-cols-1 gap-4">
           {Object.keys(mapsByName).map((name) => (
-            <Translation
-              alphabetName={name}
-              inputText={inputText}
-              key={name}
-            />
+            <Translation alphabetName={name} inputText={inputText} key={name} />
           ))}
         </div>
       )}
