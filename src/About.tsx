@@ -4,7 +4,7 @@ export function About() {
       <h2 class="text-2xl text-yellow-500">What is this thing?</h2>
 
       <p>
-        Ever wanted to make your text stand out in a chat message, tweet, or
+        Ever wanted to make your text stand out in a chat, tweet, or
         post, but can't change your font?
       </p>
 
