@@ -37,7 +37,7 @@ export function About() {
           font may be unable to render some characters or may render them
           strangely. Remember that none of these alphabets are intended to
           represent general text. Additionally, you should not expect the
-          characters to look the same on other people's computers.
+          characters to look the same on other people's devices.
         </li>
         <li>
           Tralpha's alphabets are somewhat arbitrary because I defined them. They're not
