@@ -28,11 +28,12 @@ export function About() {
       <p>
         Again, the converted text is not in a different font &#8212; instead, it
         is composed of a different set of characters that happen to look like
-        the original ones. We call these different character sets{" "}
+        the original ones. We'll call these different character sets{" "}
         <em class="italic">alphabets</em>.
       </p>
 
-      <p>In truth,{" "}
+      <p>
+        In truth,{" "}
         <a
           href="https://www.unicode.org/charts/PDF/U1D400.pdf"
           class="underline text-gray-300 hover:text-yellow-500"
