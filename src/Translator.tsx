@@ -14,8 +14,14 @@ export function Translator() {
     }
   };
 
+  const setPermalink = () => {
+    const permalink = new URL(window.location.href);
+    permalink.searchParams.set("text", inputText);
+    window.location.href = permalink.href;
+  };
+
   return (
-    <div class="flex flex-col space-y-4">
+    <div class="flex flex-col gap-4">
       <input
         type="text"
         value={inputText}
@@ -24,11 +30,31 @@ export function Translator() {
         placeholder="Enter some text"
       ></input>
       {inputText && (
-        <div class="grid grid-cols-1 gap-4">
-          {Object.keys(mapsByName).map((name) => (
-            <Translation alphabetName={name} inputText={inputText} key={name} />
-          ))}
-        </div>
+        <>
+          <div class="text-sm flex gap-4 text-gray-400 underline">
+            <button
+              onClick={() => setInputText("")}
+              class="flex items-center gap-1 hover:text-gray-200"
+            >
+              Clear
+            </button>
+            <button
+              onClick={setPermalink}
+              class="flex items-center gap-1 hover:text-gray-200"
+            >
+              Permalink
+            </button>
+          </div>
+          <div class="grid grid-cols-1 gap-4">
+            {Object.keys(mapsByName).map((name) => (
+              <Translation
+                alphabetName={name}
+                inputText={inputText}
+                key={name}
+              />
+            ))}
+          </div>
+        </>
       )}
     </div>
   );
