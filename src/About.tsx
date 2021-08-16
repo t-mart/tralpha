@@ -16,16 +16,17 @@ export function About() {
 
       <p>
         The converted text is not in a different font &#8212; instead, it is
-        composed of different characters that happen to look like the original
-        text. Here, we call these different character sets "alphabets".
+        composed of a different set of characters that happen to look like the
+        original ones. Here, we call these different character sets "alphabets".
       </p>
 
       <p>
         In truth, the characters of these other alphabets are not intended to
         represent general text. In the above example, the string "𝖍𝖊𝖑𝖑𝖔" is
         composed of characters known as Fraktur, which have special significance
-        in mathematics. The Unicode Standard recommends against this kind of
-        translation, but we're just having fun here. 🥳
+        in mathematics. The Unicode Standard recommends against these different
+        characters solely for styling purposes, but we're just having fun here.
+        🥳
       </p>
 
       <p>Please note some caveats to using this tool:</p>
@@ -39,12 +40,12 @@ export function About() {
           characters to look the same on other people's computers.
         </li>
         <li>
-          Alphabets are somewhat arbitrary because I defined them. They're not
+          Tralpha's alphabets are somewhat arbitrary because I defined them. They're not
           standard alphabets. In some cases, the Unicode Standard defines
           characters consecutively that share similar styling, which make for
           easy compilation of an alphabet. But in other cases, the characters
-          are picked from different ranges of Unicode. A good example of this
-          can be found with{" "}
+          are picked from different ranges of Unicode, so their compilation is
+          less intuitive. A good example of this can be found with{" "}
           <a
             href="https://en.wikipedia.org/w/index.php?title=Unicode_subscripts_and_superscripts&oldid=1038944135#Latin,_Greek_and_Cyrillic_tables"
             class="underline text-gray-300 hover:text-yellow-500"
@@ -56,7 +57,7 @@ export function About() {
         <li>
           While a best effort has been made to provide alphabets that map from
           ASCII completely, there are many holes: Some alphabets are missing
-          common characters, so we may pass those characters through
+          common characters, so we may pass input characters through
           unconverted. Or, some alphabets may use the same characters for upper
           and lower case. In general,{" "}
           <strong class="font-bold">
